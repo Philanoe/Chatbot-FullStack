@@ -23,6 +23,11 @@ import StreamlitPage as app
 def MainTestFunction():
     app.InitStreamLitPage()
     Question = app.UserInput()
+    
+def TestStreamLit():
+    app.InitStreamLitPage()
+    Question = app.UserInput()
+    app.AnswerUser(Question)
 
 def test():
     print("test")
@@ -36,6 +41,7 @@ def TestInput():
 if __name__ == '__main__':
     #print("start of the test program")
     #test()
-    MyInput = TestInput()
-    print(f'\nYour question was :  {MyInput}\n')
+    #MyInput = TestInput()
+    #print(f'\nYour question was :  {MyInput}\n')
+    TestStreamLit()
     #print("end of the test program")

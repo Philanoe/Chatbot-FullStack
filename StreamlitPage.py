@@ -16,4 +16,8 @@ def InitStreamLitPage():
     st.write("---")
     
 def UserInput():
-    return st.text_input()
+    return st.text_input("Please enter your question : ")
+
+def AnswerUser(Text):
+    FullString = f'The answer is {Text}'
+    st.write(FullString)
