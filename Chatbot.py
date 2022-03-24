@@ -8,3 +8,7 @@ Functions for the Multi-context question answering chatbot
 
 def Classifier(Question):
     return "Ubuntu"
+
+def QuestionAnswering(Question, Label):
+    Answer = f'Test Answer to the question : {Question}'
+    return Answer

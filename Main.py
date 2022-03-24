@@ -17,7 +17,7 @@ Answer the user
     AnswerUser(Answer)
 """
 
-import ChatbotFunctions as chat
+import Chatbot as chat
 import StreamlitPage as app
 
 app.InitStreamLitPage()

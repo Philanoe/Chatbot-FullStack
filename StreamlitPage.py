@@ -12,12 +12,11 @@ def InitStreamLitPage():
     st.set_page_config(page_title="ChatBot", page_icon="🍂")
     #st.image("")
     st.title("Multi-context question answering chatbot")
-    st.write("by JingPan and Philanoe")
     st.write("---")
-    
+
 def UserInput():
     return st.text_input("Please enter your question : ")
 
 def AnswerUser(Text):
-    FullString = f'The answer is {Text}'
+    FullString = f'The answer is : "{Text}"'
     st.write(FullString)
