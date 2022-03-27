@@ -3,6 +3,7 @@
 Created on Mon Mar 21 22:01:26 2022
 
 @author: Philanoe
+-- FRONT --
 Main module of the front end of a 
 multi-context question answering chatbot
 
@@ -23,11 +24,11 @@ So, here, we have just a QuestionAnswering function
 """
 
 import StreamlitPage as app
-import BackToEnd
+import FrontToBack
 
 app.InitStreamLitPage()
 Question = app.UserInput()
-Answer = BackToEnd.QuestionAnswering(Question)
+Answer = FrontToBack.QuestionAnswering(Question)
 app.AnswerUser(Answer)
 
 
