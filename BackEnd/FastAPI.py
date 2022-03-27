@@ -16,16 +16,13 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/{question_from_frontend}")
-def GET_Model_Question_Answering(question_from_frontend: str):
-    answer = "hello the world"
-    question = question_from_frontend
-    
-    return {"answer" : answer, "question" : question}
+@app.get("/question/")
+def EmptyQuestion():
+    answer = "Empty Question !"
+    return {"question" : "", "answer" : answer}
 
-#@app.post("/question")
-#def POST_Model_Question_Answering(data: question_from_frontend):
-#    answer = "hello the world"
-#    question = question_from_frontend
-#    
-#    return {"answer" : answer, "question" : question}
+@app.get("/question/{question_from_frontend}")
+def GET_Model_Question_Answering2(question_from_frontend):
+    answer = f'Your question {question_from_frontend} was quite interesting !'
+    question = question_from_frontend
+    return {"question" : question, "answer" : answer}

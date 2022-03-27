@@ -30,5 +30,8 @@ app.InitStreamLitPage()
 Question = app.UserInput()
 Answer = FrontToBack.QuestionAnswering(Question)
 app.AnswerUser(Answer)
+app.AnswerUser("---------")
+Test = FrontToBack.TestRequest(Question)
+app.AnswerUser(Test)
 
 
