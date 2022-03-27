@@ -26,6 +26,7 @@ def ContextBasedQuestionAnswering(Question, Context):
     return Answer
 
 def QuestionAnswering(Question):
+    
     Label = Classifier(Question)
     Context = LoadContext(Label)
     Answer = ContextBasedQuestionAnswering(Question, Context)

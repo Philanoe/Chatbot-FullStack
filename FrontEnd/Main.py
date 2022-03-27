@@ -3,7 +3,8 @@
 Created on Mon Mar 21 22:01:26 2022
 
 @author: Philanoe
-Multi-context question answering chatbot
+Main module of the front end of a 
+multi-context question answering chatbot
 
 Ask a question Q
     Question = UserInput()
@@ -15,15 +16,18 @@ Get the answer from the context data
     Answer = QuestionAnswering(Question, Context)
 Answer the user
     AnswerUser(Answer)
+    
+Finally, the label classification and context based question answering
+will be dealt with in the back end
+So, here, we have just a QuestionAnswering function
 """
 
-import Chatbot as chat
 import StreamlitPage as app
+import BackToEnd
 
 app.InitStreamLitPage()
 Question = app.UserInput()
-Label = chat.Classifier(Question)
-Answer = chat.QuestionAnswering(Question, Label)
+Answer = BackToEnd.QuestionAnswering(Question)
 app.AnswerUser(Answer)
 
 
