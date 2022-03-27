@@ -6,9 +6,29 @@ Created on Mon Mar 21 22:01:26 2022
 Functions for the Multi-context question answering chatbot
 """
 
+def Init():
+    import os
+    #import transformers
+    #model = 'sfs'
+
 def Classifier(Question):
     return "Ubuntu"
 
-def QuestionAnswering(Question, Label):
-    Answer = f'Test Answer to the question : {Question}'
+def LoadContext(Label):
+    if(Label == "sldkfjsfd"):
+        Context = "sdfsdf"
+    elif(Label == "sldkfjsfd"):
+        Context == "sdfsdfx"
+    return Context
+
+def ContextBasedQuestionAnswering(Question, Context):
+    Answer = "sdfsdf"
     return Answer
+
+def QuestionAnswering(Question):
+    Label = Classifier(Question)
+    Context = LoadContext(Label)
+    Answer = ContextBasedQuestionAnswering(Question, Context)
+    
+    return Answer
+
